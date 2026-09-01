@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="About Aberdare Technical College ICT Department - ICT Training, Digital Skills and Technology">
+
+    <title>About Us - ICT Department | Aberdare Technical College</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            color: #ffd700;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background:
+                linear-gradient(rgba(128, 0, 0, 0.9),
+                rgba(80, 0, 0, 0.9)),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Main Content */
+        .section {
+            padding: 60px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #800000;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            max-width: 1000px;
+            margin: 0 auto 20px;
+            text-align: justify;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #800000;
+        }
+
+        .card h3 {
+            color: #800000;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .card p {
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        /* Training Areas */
+        .training-list {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .training-item {
+            background: white;
+            padding: 18px;
+            border-left: 5px solid #800000;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            font-weight: bold;
+        }
+
+        /* Modules */
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .module {
+            background: #800000;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+            background: #5c0000;
+        }
+
+        .module h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        /* Call To Action */
+        .cta {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cta h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 750px;
+            margin: auto auto 25px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ffd700;
+            color: #800000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .cta a:hover {
+            background-color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5c0000;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        footer span {
+            color: #ffd700;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>ICT Department</h1>
+
+            <p>Aberdare Technical College</p>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="module1.html">Module 1</a>
+                </li>
+
+                <li>
+                    <a href="module2.html">Module 2</a>
+                </li>
+
+                <li>
+                    <a href="module3.html">Module 3</a>
+                </li>
+
+                <li>
+                    <a href="module4.html">Module 4</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h2>About ICT Department</h2>
+
+        <p>
+            Empowering learners with practical ICT skills,
+            digital knowledge and technological competencies
+            for the modern workplace.
+        </p>
+
+    </section>
+
+
+    <!-- About Department -->
+
+    <section class="section">
+
+        <h2>About the ICT Department</h2>
+
+        <p>
+            The ICT Department at Aberdare Technical College is
+            committed to providing quality technical and
+            vocational education and training in Information and
+            Communication Technology.
+        </p>
+
+        <p>
+            The department equips learners with practical,
+            technical and professional skills required to
+            effectively use, maintain, manage and develop
+            information technology systems.
+        </p>
+
+        <p>
+            Training emphasizes practical learning, problem
+            solving, innovation, digital literacy and the
+            application of ICT skills in real-world environments.
+        </p>
+
+    </section>
+
+
+    <!-- Mission and Vision -->
+
+    <section class="section">
+
+        <h2>Our Vision & Mission</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To develop competent, innovative and
+                    technology-oriented ICT professionals who
+                    can contribute effectively to the digital
+                    transformation of society and industry.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide quality, practical and
+                    industry-oriented ICT training that equips
+                    learners with relevant technical, digital,
+                    entrepreneurial and professional skills.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Our Values</h3>
+
+                <p>
+                    We promote professionalism, integrity,
+                    teamwork, innovation, creativity,
+                    discipline, continuous learning and
+                    responsible use of technology.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Training Areas -->
+
+    <section class="section">
+
+        <h2>ICT Training Areas</h2>
+
+        <div class="training-list">
+
+            <div class="training-item">
+                Computer Operations
+            </div>
+
+            <div class="training-item">
+                Computer Repair and Maintenance
+            </div>
+
+            <div class="training-item">
+                Computer Networking
+            </div>
+
+            <div class="training-item">
+                Database Management
+            </div>
+
+            <div class="training-item">
+                Computer Programming
+            </div>
+
+            <div class="training-item">
+                Web Design and Development
+            </div>
+
+            <div class="training-item">
+                Cyber Security
+            </div>
+
+            <div class="training-item">
+                Digital Literacy
+            </div>
+
+            <div class="training-item">
+                Entrepreneurship and ICT
+            </div>
+
+            <div class="training-item">
+                ICT Project Development
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Modules -->
+
+    <section class="section">
+
+        <h2>ICT Modules</h2>
+
+        <div class="modules">
+
+            <div class="module">
+
+                <h3>Module 1</h3>
+
+                <p>
+                    Foundation ICT skills,
+                    computer operations and
+                    computer essentials.
+                </p>
+
+            </div>
+
+
+            <div class="module">
+
+                <h3>Module 2</h3>
+
+                <p>
+                    Computer repair,
+                    maintenance and
+                    computer networking.
+                </p>
+
+            </div>
+
+
+            <div class="module">
+
+                <h3>Module 3</h3>
+
+                <p>
+                    Advanced ICT skills,
+                    digital literacy,
+                    networking and software.
+                </p>
+
+            </div>
+
+
+            <div class="module">
+
+                <h3>Module 4</h3>
+
+                <p>
+                    Programming, databases,
+                    entrepreneurship and
+                    communication skills.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+
+    <section class="section">
+
+        <h2>Why Choose ICT Training?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Practical Training</h3>
+
+                <p>
+                    Learners gain hands-on experience through
+                    practical activities, laboratory exercises
+                    and real-world ICT tasks.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Industry Skills</h3>
+
+                <p>
+                    Training focuses on skills that can be
+                    applied in modern workplaces and
+                    technology-based businesses.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Innovation</h3>
+
+                <p>
+                    Learners are encouraged to develop
+                    creativity, problem-solving abilities and
+                    innovative technology solutions.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Career Development</h3>
+
+                <p>
+                    ICT training provides learners with
+                    technical competencies that can support
+                    employment, entrepreneurship and further
+                    education.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+
+    <section class="cta">
+
+        <h2>Join Our ICT Training Programmes</h2>
+
+        <p>
+            Develop practical ICT skills and prepare yourself
+            for opportunities in the rapidly changing digital
+            world.
+        </p>
+
+        <a href="contact.html">
+            Contact Us
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026
+            <span>Aberdare Technical College ICT Department</span>
+        </p>
+
+        <p>
+            Excellence in ICT Training and Technology
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

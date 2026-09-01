@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact ICT Department - Aberdare Technical College">
+
+    <title>Contact Us - ICT Department</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            color: #ffd700;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(80, 0, 0, 0.9)),
+                        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 8%;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: #800000;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #800000;
+        }
+
+        .contact-card h3 {
+            color: #800000;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .contact-card p {
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .contact-card a:hover {
+            color: #800000;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
+            background-color: #25D366;
+            color: white !important;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* Email Button */
+        .email-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
+            background-color: #800000;
+            color: white !important;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .email-btn:hover {
+            background-color: #5c0000;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        footer span {
+            color: #ffd700;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <h1>ICT Department</h1>
+            <p>Aberdare Technical College</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module1.html">Module 1</a></li>
+                <li><a href="module2.html">Module 2</a></li>
+                <li><a href="module3.html">Module 3</a></li>
+                <li><a href="module4.html">Module 4</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Get in touch with the ICT Department for training,
+            enquiries and support.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+
+        <h2>Get In Touch</h2>
+
+        <div class="contact-container">
+
+            <!-- Phone 1 -->
+            <div class="contact-card">
+
+                <h3>Phone / WhatsApp</h3>
+
+                <p>
+                    <a href="tel:0729421226">
+                        0729 421 226
+                    </a>
+                </p>
+
+                <a class="whatsapp-btn"
+                   href="https://wa.me/254729421226"
+                   target="_blank">
+
+                    WhatsApp 0729 421 226
+
+                </a>
+
+            </div>
+
+
+            <!-- Phone 2 -->
+            <div class="contact-card">
+
+                <h3>Phone / WhatsApp</h3>
+
+                <p>
+                    <a href="tel:0734822073">
+                        0734 822 073
+                    </a>
+                </p>
+
+                <a class="whatsapp-btn"
+                   href="https://wa.me/254734822073"
+                   target="_blank">
+
+                    WhatsApp 0734 822 073
+
+                </a>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="contact-card">
+
+                <h3>Email</h3>
+
+                <p>
+                    jamesndirangu201919@gmail.com
+                </p>
+
+                <a class="email-btn"
+                   href="mailto:jamesndirangu201919@gmail.com">
+
+                    Send Email
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 <span>ICT Department</span>
+            - Aberdare Technical College
+        </p>
+
+        <p>
+            Excellence in ICT Training and Technology
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

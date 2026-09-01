@@ -1,0 +1,2221 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Aberdare Technical College - ICT Department Module 1 Training and Assessment">
+
+    <title>Module 1 - ICT Department</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+
+            /* MAIN BACKGROUND IMAGE */
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.90),
+                    rgba(255,255,255,0.90)
+                ),
+                url("images/ict-background.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+
+            background:
+                linear-gradient(
+                    rgba(128,0,0,0.88),
+                    rgba(77,0,0,0.92)
+                ),
+                url("images/computer-lab.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+            text-align: center;
+
+            padding: 55px 20px 45px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 17px;
+        }
+
+
+        /* ================= HAMBURGER NAVIGATION ================= */
+
+        .navbar {
+
+            background: #4d0000;
+
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 25px;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 9999;
+
+            box-shadow:
+                0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .nav-title {
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= HAMBURGER ================= */
+
+        .hamburger {
+
+            width: 45px;
+            height: 42px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #800000;
+
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 5px;
+        }
+
+        .hamburger span {
+
+            width: 27px;
+            height: 3px;
+
+            background: white;
+
+            border-radius: 3px;
+
+            transition: 0.3s;
+        }
+
+        .hamburger:hover {
+            background: #a00000;
+        }
+
+
+        /* ================= MENU ================= */
+
+        .nav-menu {
+
+            position: absolute;
+
+            right: 20px;
+            top: 65px;
+
+            width: 270px;
+
+            background: #4d0000;
+
+            display: none;
+            flex-direction: column;
+
+            border-radius: 0 0 8px 8px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.35);
+
+            overflow: hidden;
+        }
+
+        .nav-menu.show {
+            display: flex;
+        }
+
+        .nav-menu a {
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 20px;
+
+            border-bottom:
+                1px solid #6d1a1a;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+
+            background: #800000;
+
+            padding-left: 28px;
+        }
+
+        .nav-menu a.active {
+            background: #800000;
+        }
+
+
+        /* ================= QUICK ACCESS BUTTONS ================= */
+
+        .nav-btn-container {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            padding: 18px;
+
+            background:
+                linear-gradient(
+                    rgba(102,0,0,0.94),
+                    rgba(102,0,0,0.94)
+                ),
+                url("images/network-background.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-btn {
+
+            background: #800000;
+
+            color: white;
+
+            padding: 11px 18px;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            border:
+                1px solid #aa4444;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+
+            background: #a00000;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 3px 8px rgba(0,0,0,0.3);
+        }
+
+
+        /* ================= CONTAINER ================= */
+
+        .container {
+
+            width: 95%;
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 20px;
+        }
+
+
+        /* ================= HEADINGS ================= */
+
+        h2 {
+
+            color: #800000;
+
+            margin-top: 30px;
+
+            border-left:
+                6px solid #800000;
+
+            padding-left: 10px;
+        }
+
+
+        /* ================= INFORMATION CARD ================= */
+
+        .info-card {
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.94),
+                    rgba(255,255,255,0.94)
+                ),
+                url("images/computer-training.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 30px;
+
+            margin: 20px 0;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.15);
+
+            border-top:
+                5px solid #800000;
+        }
+
+        .info-card h3 {
+
+            color: #800000;
+
+            margin-top: 0;
+
+            font-size: 25px;
+        }
+
+        .info-card li {
+            margin: 8px 0;
+        }
+
+
+        /* ================= UNIT CARDS ================= */
+
+        .unit-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+            margin: 20px 0 35px;
+        }
+
+        .unit-card {
+
+            min-height: 280px;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            border-top:
+                5px solid #800000;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.18);
+
+            transition: 0.3s;
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .unit-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(0,0,0,0.58);
+
+            z-index: 0;
+        }
+
+        .unit-card > * {
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+        .unit-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.25);
+        }
+
+
+        /* COMPUTER OPERATIONS */
+
+        .operations-card {
+
+            background-image:
+                url("images/computer-operations.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        /* COMPUTER ESSENTIALS */
+
+        .essentials-card {
+
+            background-image:
+                url("images/computer-essentials.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+        .unit-card h3 {
+
+            color: white;
+
+            font-size: 25px;
+
+            margin-top: 0;
+        }
+
+        .unit-card p {
+            color: white;
+        }
+
+
+        /* ================= TABLE ================= */
+
+        .table-wrapper {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+            background: white;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.15);
+
+            margin-bottom: 30px;
+        }
+
+        table {
+
+            width: 100%;
+
+            min-width: 1250px;
+
+            border-collapse: collapse;
+
+            background: white;
+        }
+
+        th,
+        td {
+
+            border:
+                1px solid #ddd;
+
+            padding: 10px;
+
+            text-align: center;
+        }
+
+        th {
+
+            background: #800000;
+
+            color: white;
+
+            font-size: 13px;
+        }
+
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+
+        .student-name {
+
+            background:
+                #f1dada !important;
+
+            color: #4d0000;
+
+            font-weight: bold;
+        }
+
+        .unit-name {
+
+            background:
+                #f7e6e6 !important;
+
+            color: #4d0000;
+
+            font-weight: bold;
+
+            text-align: left;
+
+            min-width: 300px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .btn {
+
+            display: inline-block;
+
+            background: #800000;
+
+            color: white;
+
+            padding: 6px 10px;
+
+            text-decoration: none;
+
+            border-radius: 4px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #a00000;
+        }
+
+
+        /* ================= CARD ================= */
+
+        .card {
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.96),
+                    rgba(255,255,255,0.96)
+                ),
+                url("images/technology-background.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 25px;
+
+            margin: 25px 0;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+
+            color: #800000;
+
+            border-bottom:
+                2px solid #eee;
+
+            padding-bottom: 8px;
+
+            margin-top: 0;
+        }
+
+        .card h4 {
+
+            color: #660000;
+
+            margin-top: 25px;
+        }
+
+
+        /* ================= ASSESSMENT ITEM ================= */
+
+        .assessment-item {
+
+            background: #f9eeee;
+
+            border-left:
+                5px solid #800000;
+
+            padding: 12px;
+
+            margin: 8px 0;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* ================= CHECKLIST ================= */
+
+        .checklist-item {
+
+            background: #faf2f2;
+
+            border-left:
+                5px solid #800000;
+
+            padding: 15px;
+
+            margin: 10px 0;
+
+            border-radius: 5px;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* ================= PORTFOLIO ================= */
+
+        .portfolio-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .portfolio-item {
+
+            background: #f9eeee;
+
+            border-left:
+                5px solid #800000;
+
+            padding: 13px;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        /* ================= TRAINER SECTION ================= */
+
+        .trainer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .trainer-card {
+
+            background: #f9eeee;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            border-left:
+                5px solid #800000;
+        }
+
+        .trainer-card h4 {
+
+            margin-top: 0;
+
+            color: #800000;
+
+            font-size: 20px;
+        }
+
+        .trainer-card strong {
+            color: #4d0000;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background:
+                linear-gradient(
+                    rgba(77,0,0,0.94),
+                    rgba(77,0,0,0.94)
+                ),
+                url("images/computer-lab.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .unit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trainer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            header h2 {
+                font-size: 18px;
+            }
+
+            .navbar {
+                padding: 0 15px;
+            }
+
+            .nav-title {
+                font-size: 14px;
+            }
+
+            .nav-menu {
+
+                right: 10px;
+
+                width: 240px;
+            }
+
+            .container {
+
+                width: 100%;
+
+                padding: 10px;
+            }
+
+            .nav-btn {
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .portfolio-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .assessment-item,
+            .checklist-item,
+            .portfolio-item {
+
+                display: block;
+            }
+
+            .assessment-item .btn,
+            .checklist-item .btn,
+            .portfolio-item .btn {
+
+                margin-top: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>
+        ABERDARE TECHNICAL COLLEGE
+    </h1>
+
+    <h2>
+        ICT DEPARTMENT
+    </h2>
+
+    <p>
+        MODULE 1 - TRAINING AND ASSESSMENT
+    </p>
+
+</header>
+
+
+
+<!-- ================= HAMBURGER NAVIGATION ================= -->
+
+<nav class="navbar">
+
+    <div class="nav-title">
+        ICT DEPARTMENT
+    </div>
+
+
+    <button class="hamburger"
+            onclick="toggleMenu()"
+            aria-label="Open Navigation Menu">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <div class="nav-menu" id="navMenu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="module1.html"
+           class="active">
+            Module 1
+        </a>
+
+        <a href="module2.html">
+            Module 2
+        </a>
+
+        <a href="module3.html">
+            Module 3
+        </a>
+
+        <a href="module4.html">
+            Module 4
+        </a>
+
+        <a href="contacts.html">
+            Contacts
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= QUICK ACCESS BUTTONS ================= -->
+
+<div class="nav-btn-container">
+
+    <a href="computer-operations-learning-plan.pdf"
+       class="nav-btn">
+
+        Computer Operations Learning Plan
+
+    </a>
+
+
+    <a href="computer-essentials-learning-plan.pdf"
+       class="nav-btn">
+
+        Computer Essentials Learning Plan
+
+    </a>
+
+
+    <a href="record-of-work.pdf"
+       class="nav-btn">
+
+        Record of Work
+
+    </a>
+
+
+    <a href="attendance.pdf"
+       class="nav-btn">
+
+        Attendance
+
+    </a>
+
+
+    <a href="scoresheet.pdf"
+       class="nav-btn">
+
+        Scoresheet
+
+    </a>
+
+</div>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="container">
+
+
+    <!-- ================= MODULE INFORMATION ================= -->
+
+    <div class="info-card">
+
+        <h3>
+            Module 1 - ICT Department
+        </h3>
+
+        <p>
+
+            This page provides learning resources,
+            practical assessment records, trainer
+            e-portfolio information, observation
+            checklists and student portfolio records
+            for learners undertaking Module 1 in the
+            ICT Department.
+
+        </p>
+
+        <p>
+
+            <strong>
+                Module 1 focuses on fundamental computer
+                operation skills, computer hardware,
+                software and essential ICT competencies.
+            </strong>
+
+        </p>
+
+        <p>
+
+            Learners are expected to demonstrate
+            competent use of computers, safe working
+            practices, proper handling of computer
+            equipment, use of operating systems,
+            application software and basic computer
+            maintenance procedures.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= LEARNING AREAS ================= -->
+
+    <h2>
+        Module 1 Learning Areas
+    </h2>
+
+
+    <div class="unit-grid">
+
+
+        <!-- COMPUTER OPERATIONS -->
+
+        <div class="unit-card operations-card">
+
+            <h3>
+                Computer Operations
+            </h3>
+
+            <p>
+
+                This unit covers practical computer
+                operation skills including starting
+                and shutting down computers, using
+                operating systems, managing files and
+                folders, using application software,
+                printing and maintaining a productive
+                computer working environment.
+
+            </p>
+
+            <a href="computer-operations-learning-plan.pdf"
+               class="btn">
+
+                View Learning Plan
+
+            </a>
+
+        </div>
+
+
+
+        <!-- COMPUTER ESSENTIALS -->
+
+        <div class="unit-card essentials-card">
+
+            <h3>
+                Computer Essentials
+            </h3>
+
+            <p>
+
+                This unit introduces essential computer
+                concepts including computer hardware,
+                software, input and output devices,
+                storage devices, operating systems,
+                computer security, maintenance and
+                safe use of ICT equipment.
+
+            </p>
+
+            <a href="computer-essentials-learning-plan.pdf"
+               class="btn">
+
+                View Learning Plan
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= PRACTICAL ASSESSMENT ================= -->
+
+    <h2>
+        Practical Assessment Scores
+    </h2>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th rowspan="2">
+                        Student
+                    </th>
+
+                    <th rowspan="2">
+                        Unit
+                    </th>
+
+                    <th colspan="2">
+                        Practical 1
+                    </th>
+
+                    <th rowspan="2">
+                        View Exam
+                    </th>
+
+                    <th colspan="2">
+                        Practical 2
+                    </th>
+
+                    <th rowspan="2">
+                        View Exam
+                    </th>
+
+                    <th colspan="2">
+                        Practical 3
+                    </th>
+
+                    <th rowspan="2">
+                        View Exam
+                    </th>
+
+                    <th rowspan="2">
+                        FA Practical<br>
+                        Average
+                    </th>
+
+                    <th rowspan="2">
+                        FA Oral<br>
+                        Average
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <th>
+                        Prac
+                    </th>
+
+                    <th>
+                        Oral
+                    </th>
+
+                    <th>
+                        Prac
+                    </th>
+
+                    <th>
+                        Oral
+                    </th>
+
+                    <th>
+                        Prac
+                    </th>
+
+                    <th>
+                        Oral
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <!-- ================= STUDENT 1 ================= -->
+
+                <tr>
+
+                    <td rowspan="2"
+                        class="student-name">
+
+                        STUDENT 1
+
+                    </td>
+
+
+                    <td class="unit-name">
+
+                        Computer Operations
+
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td class="unit-name">
+
+                        Computer Essentials
+
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+
+                <!-- ================= STUDENT 2 ================= -->
+
+                <tr>
+
+                    <td rowspan="2"
+                        class="student-name">
+
+                        STUDENT 2
+
+                    </td>
+
+
+                    <td class="unit-name">
+
+                        Computer Operations
+
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td class="unit-name">
+
+                        Computer Essentials
+
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+
+                <!-- ================= STUDENT 3 ================= -->
+
+                <tr>
+
+                    <td rowspan="2"
+                        class="student-name">
+
+                        STUDENT 3
+
+                    </td>
+
+                    <td class="unit-name">
+                        Computer Operations
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td class="unit-name">
+                        Computer Essentials
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+
+                <!-- ================= STUDENT 4 ================= -->
+
+                <tr>
+
+                    <td rowspan="2"
+                        class="student-name">
+
+                        STUDENT 4
+
+                    </td>
+
+                    <td class="unit-name">
+                        Computer Operations
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td class="unit-name">
+                        Computer Essentials
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                    <td>
+                        <a href="#"
+                           class="btn">
+                            View
+                        </a>
+                    </td>
+
+                    <td>-</td>
+                    <td>-</td>
+
+                </tr>
+
+
+
+                <!-- ================= STUDENTS 5-10 ================= -->
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 5</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 6</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 7</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 8</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 9</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+                <tr>
+                    <td rowspan="2" class="student-name">STUDENT 10</td>
+                    <td class="unit-name">Computer Operations</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+                <tr>
+                    <td class="unit-name">Computer Essentials</td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                    <td><a href="#" class="btn">View</a></td>
+                    <td>-</td><td>-</td>
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- ================= TRAINER E-PORTFOLIO ================= -->
+
+    <div class="card">
+
+        <h3>
+            TRAINER'S e-PORTFOLIO
+        </h3>
+
+
+        <div class="trainer-grid">
+
+
+            <div class="trainer-card">
+
+                <h4>
+                    Computer Operations
+                </h4>
+
+                <p>
+
+                    Practical assessment evidence,
+                    learning resources and trainer
+                    records for Computer Operations.
+
+                </p>
+
+                <br>
+
+                <a href="computer-operations-practical1.pdf"
+                   class="btn">
+                    Practical 1
+                </a>
+
+                <a href="computer-operations-practical2.pdf"
+                   class="btn">
+                    Practical 2
+                </a>
+
+                <a href="computer-operations-practical3.pdf"
+                   class="btn">
+                    Practical 3
+                </a>
+
+            </div>
+
+
+            <div class="trainer-card">
+
+                <h4>
+                    Computer Essentials
+                </h4>
+
+                <p>
+
+                    Practical assessment evidence,
+                    learning resources and trainer
+                    records for Computer Essentials.
+
+                </p>
+
+                <br>
+
+                <a href="computer-essentials-practical1.pdf"
+                   class="btn">
+                    Practical 1
+                </a>
+
+                <a href="computer-essentials-practical2.pdf"
+                   class="btn">
+                    Practical 2
+                </a>
+
+                <a href="computer-essentials-practical3.pdf"
+                   class="btn">
+                    Practical 3
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= OBSERVATION CHECKLIST ================= -->
+
+    <div class="card">
+
+        <h3>
+            CONTINUOUS PRACTICAL OBSERVATION CHECKLIST
+        </h3>
+
+
+        <h4>
+            Computer Operations
+        </h4>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 1 Checklist
+            </span>
+
+            <a href="computer-operations-checklist1.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 2 Checklist
+            </span>
+
+            <a href="computer-operations-checklist2.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 3 Checklist
+            </span>
+
+            <a href="computer-operations-checklist3.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+
+
+        <h4>
+            Computer Essentials
+        </h4>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 1 Checklist
+            </span>
+
+            <a href="computer-essentials-checklist1.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 2 Checklist
+            </span>
+
+            <a href="computer-essentials-checklist2.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+
+        <div class="checklist-item">
+
+            <span>
+                Practical 3 Checklist
+            </span>
+
+            <a href="computer-essentials-checklist3.pdf"
+               class="btn">
+
+                View Checklist
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= STUDENT PORTFOLIO ================= -->
+
+    <div class="card">
+
+        <h3>
+            STUDENT PORTFOLIO
+        </h3>
+
+        <p>
+
+            Student practical work, evidence,
+            photographs, completed assessment records
+            and other learning evidence can be accessed
+            below.
+
+        </p>
+
+
+        <div class="portfolio-grid">
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 1
+                </strong>
+
+                <a href="student1-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 2
+                </strong>
+
+                <a href="student2-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 3
+                </strong>
+
+                <a href="student3-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 4
+                </strong>
+
+                <a href="student4-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 5
+                </strong>
+
+                <a href="student5-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 6
+                </strong>
+
+                <a href="student6-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 7
+                </strong>
+
+                <a href="student7-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 8
+                </strong>
+
+                <a href="student8-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 9
+                </strong>
+
+                <a href="student9-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <strong>
+                    Student 10
+                </strong>
+
+                <a href="student10-portfolio.html"
+                   class="btn">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        <strong>
+            ABERDARE TECHNICAL COLLEGE
+        </strong>
+
+    </p>
+
+
+    <p>
+        ICT Department | Module 1
+    </p>
+
+
+    <p>
+        Computer Operations | Computer Essentials
+    </p>
+
+
+    <p>
+        Practical Competency-Based Training
+    </p>
+
+
+    <p>
+
+        &copy; 2026 Aberdare Technical College |
+        ICT Department |
+        James Ndirangu |
+        Jojahr Solutions |
+        ICT Department.
+
+    </p>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* ================= HAMBURGER MENU ================= */
+
+    function toggleMenu() {
+
+        const menu =
+            document.getElementById("navMenu");
+
+        menu.classList.toggle("show");
+
+    }
+
+
+    /* ================= CLOSE MENU WHEN LINK IS CLICKED ================= */
+
+    document
+        .querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navMenu")
+                    .classList.remove("show");
+
+            });
+
+        });
+
+
+    /* ================= CLICK OUTSIDE TO CLOSE MENU ================= */
+
+    document.addEventListener("click", function(event) {
+
+        const navbar =
+            document.querySelector(".navbar");
+
+        const menu =
+            document.getElementById("navMenu");
+
+
+        if (!navbar.contains(event.target)) {
+
+            menu.classList.remove("show");
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
+```
